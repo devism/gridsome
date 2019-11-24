@@ -16,12 +16,14 @@ module.exports = {
       ]
     }
   },
-  
+  templates: {
+    Post: '/posts/:title',
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'posts/**/*.md',
+        path: 'posts/*.md',
         typeName: 'Post',
         remark: {
           plugins: [
